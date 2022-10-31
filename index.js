@@ -1,5 +1,6 @@
 import Books from "./modules/Books.js";
 import showSectionDynamically from "./modules/dynamicSections.js";
+import { DateTime } from "./modules/luxon.js";
 
 const books = new Books();
 
@@ -12,17 +13,7 @@ showSectionDynamically();
 
 const insertDate = () => {
   const dateEl = document.querySelector(".display-date");
-  const date = new Date();
-  const displayDate = date.toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-  const displayTime = date.toLocaleTimeString();
-
-  const dateString = `${displayDate}, ${displayTime}`;
-
-  dateEl.innerHTML = dateString;
+  dateEl.innerHTML = DateTime.now().setZone("system");
 };
 
 setInterval(() => {
