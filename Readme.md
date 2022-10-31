@@ -10,7 +10,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://serengia.github.io/awesome-books/)
+[Live Demo Link](https://serengia.github.io/awesome-books--with-es6-modules/)
 
 ## Getting Started
 
